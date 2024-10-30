@@ -1,0 +1,261 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/*start custom classes */
+.w-fit {
+    width: fit-content;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.xy-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* end cutom classes */
+
+/* start nav */
+nav{
+    z-index: 9999;
+    transition: 0.5s;
+}
+
+nav .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+nav .nav-link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0px;
+    transition: 0.3s;
+}
+
+nav .nav-link:hover::before,
+nav .nav-link.active::before {
+    width: 100%;
+}
+
+@media(min-width : 768px) {
+
+    nav .nav-link:hover::before,
+    nav .nav-link.active::before {
+        width: calc(100% - 16px);
+        left: 8px;
+    }
+}
+
+nav.header::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background-color: white;
+}
+
+/* end nav */
+
+/* start main */
+main{
+    padding-top: 160px;
+}
+main .post {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main .post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+main .post h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+main .post p {
+    color: #666;
+    line-height: 1.6;
+}
+
+main .post .btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+main .post .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+main .sidebar {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+main .sidebar h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+main .sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+main .sidebar ul li {
+    margin-bottom: 10px;
+}
+
+main .sidebar ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+main .sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* end main */
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* start back to top button */
+.back-top {
+    width: 40px;
+    height: 40px;
+    bottom: 1rem;
+    left: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.back-top .fa-arrow-up {
+    position: relative;
+}
+
+.back-top:hover {
+    transform: scale(1.2);
+}
+
+.back-top:hover .fa-arrow-up {
+    animation-name: top;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes top {
+    0% {
+        top: 0px;
+    }
+
+    25% {
+        top: -5px;
+    }
+
+    75% {
+        top: 5px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+/* end back to top button */
+
+/* start loading */
+.loading{
+    transition: 0.5s;
+    z-index: 99999;
+}
+
+.loader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 6rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    animation: pulsOut 1.8s ease-in-out infinite;
+    filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
+}
+
+.loader:before {
+    width: 100%;
+    padding-bottom: 100%;
+    box-shadow: inset 0 0 0 1rem #fff;
+    animation-name: pulsIn;
+}
+
+.loader:after {
+    width: calc(100% - 2rem);
+    padding-bottom: calc(100% - 2rem);
+    box-shadow: 0 0 0 0 #fff;
+}
+
+@keyframes pulsIn {
+    0% {
+        box-shadow: inset 0 0 0 1rem #fff;
+        opacity: 1;
+    }
+    50%,
+    100% {
+        box-shadow: inset 0 0 0 0 #fff;
+        opacity: 0;
+    }
+}
+
+@keyframes pulsOut {
+    0%,
+    50% {
+        box-shadow: 0 0 0 0 #fff;
+        opacity: 0;
+    }
+    100% {
+        box-shadow: 0 0 0 1rem #fff;
+        opacity: 1;
+    }
+}
+
+/* end loading */
