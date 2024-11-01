@@ -1,6 +1,6 @@
 <h1>Description of the improvements in the design.</h1>
 
-<h2>Note : you can switch between the two version with git commits,</h2>
+<h2>Note : you can switch between the two version with git commits.</h2>
 
 <ul>
  <li>Before : commit name "Code Before Modifications"</li>
