@@ -1,4 +1,4 @@
---> Description of the improvements in the design.
+<h1>--> Description of the improvements in the design.</h1>
 
 Note : you can switch between the two version with git commits,
  
