@@ -138,6 +138,7 @@ main .sidebar ul li a:hover {
 
 /* end main */
 
+/* start footer */
 .footer {
     background-color: #343a40;
     color: white;
@@ -149,6 +150,11 @@ main .sidebar ul li a:hover {
 .footer p {
     margin: 0;
 }
+
+footer input{
+    background-color: #dadada !important;
+}
+/* end footer */
 
 /* start back to top button */
 .back-top {
