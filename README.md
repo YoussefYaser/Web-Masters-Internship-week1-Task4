@@ -1,9 +1,14 @@
-<h1>--> Description of the improvements in the design.</h1>
+<h1>Description of the improvements in the design.</h1>
 
-Note : you can switch between the two version with git commits,
+<h2>Note : you can switch between the two version with git commits,</h2>
+
+<ul>
+ <li>Before : commit name "Code Before Modifications"</li>
+ <li>After : commit name "Code after Modifications"</li>
+</ul>
  
-Before : commit name "Code Before Modifications"
-After : commit name "Code after Modifications"
+
+
 
 
 1- Move CSS styles to external file "style/main.css".
